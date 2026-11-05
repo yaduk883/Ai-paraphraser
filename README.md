@@ -65,9 +65,6 @@ print(result.paraphrased_text)
 print(result.summary)   # similarity, originality, fluency, grammar issues
 ```
 
-Useful settings when building the tool in Section 6:
-
-```python
 tool = Paraphraser.default(num_candidates=8, min_similarity=0.85)   # stricter meaning check
 ```
 
@@ -85,14 +82,8 @@ Optionally set `REFERENCES` to a list of human paraphrases (same order as `SAMPL
 
 Running the notebook also saves `evaluation_results.csv` and `sample_results.md` next to it. These files, and all sample outputs, come from the real models when you run it.
 
-## Notes on testing
 
-The notebook was checked with stand-in models in place of the neural networks: all cells ran, and the sanity tests in Section 5 pass. Generation with the real T5 model depends on the downloaded weights, so run the notebook once end to end and keep the saved outputs when you download or commit it.
 
-## Limitations
 
-- Automatic metrics are proxies. Embedding similarity can miss subtle changes such as negation, and perplexity favours common phrasing. For stronger claims, add human judgement and a larger labelled set (for example PAWS or MRPC).
-- Only five paragraphs are evaluated, so the numbers are indicative, not conclusive.
-- The spell checker uses a US English dictionary, so British spellings in newly generated words are flagged.
-- "Originality" means not copying the source wording. It is **not** a plagiarism check against outside documents.
-- Fine-tuning is not included, since the default model is already trained for paraphrasing. To adapt it to a domain, fine-tune T5 on a paraphrase dataset (for example PAWS or QQP duplicates) with PyTorch and pass the saved folder as `model_name`.
+
+
