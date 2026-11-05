@@ -83,7 +83,8 @@ Optionally set `REFERENCES` to a list of human paraphrases (same order as `SAMPL
 Running the notebook also saves `evaluation_results.csv` and `sample_results.md` next to it. These files, and all sample outputs, come from the real models when you run it.
 
 
+
+````
+
 Open in `Google Colab` : https://colab.research.google.com/drive/16OBBtvh36-Gw6G0A4iWIwRXek94xX1OF?usp=sharing
-
-
 
